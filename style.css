@@ -1,0 +1,137 @@
+/* 
+    Default style
+*/
+*{
+    box-sizing: border-box
+}
+body{
+    background:url(./back.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding:0;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Lato;
+}
+/* 
+    Game style
+*/
+.pig_game{
+    width:1000px;
+    height: 600px;
+    box-shadow: 0px 10px 50px rgba(0,0,0,.3);
+    background: #fff;
+    margin:auto ;
+    display: flex;
+    position: relative;
+}
+.player_0,.player_1{
+    width:50%;
+    height: 100%;
+    padding:100px;
+    text-align: center;
+    text-transform: uppercase
+}
+.player_name{
+    font-size: 50px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    position: relative;
+}
+.player_score{
+    color: #EB4D4D;
+    font-weight: 300;
+    margin: 0;
+    margin-bottom: 125px;
+    font-size: 70px;
+    
+}
+.player_current{
+    background: #eb4d4d;
+    width: 40%;
+    margin: auto;
+    padding: 12px;
+}
+.player_current h3:first-child{
+    font-size:12px;
+    font-weight: 100;
+    margin: 0px
+}
+.current{
+    color:#fff;
+    margin-bottom: 0;
+    font-size:30px;
+    margin-top: 10px;
+}
+.active{
+    background: #f7f7f7
+}
+.active .player_name::after{
+    content: '';
+    position: absolute;
+    background: #eb4d4d;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: 30px;
+    right: 10px;
+}
+/* 
+    Game Control
+*/
+.new_game,.roll_dice,.hold{
+    position: absolute;
+    width: 190px;
+    text-align: center;
+    left: 50%;
+    cursor: pointer;
+    outline: none;
+    transform: translateX(-50%);
+    background: none;
+    border: none;
+    top: 45px;
+    font-size: 20px;
+    font-weight: 100;
+    transition: all 0.3s ease;
+    text-transform: uppercase
+}
+.roll_dice{
+    top: auto;
+    bottom: 170px;
+}
+.hold{
+    top:auto;
+    bottom:120px
+}
+.new_game:hover i,.roll_dice:hover i,.hold:hover i{
+    transform: translateX(-5px)
+}
+.new_game:hover,.roll_dice:hover,.hold:hover{
+    font-family: 600
+}
+.roll_dice i, .hold i{
+    transition:all .3s ease;
+    color:#eb4d4d
+}
+.new_game i{
+    border: 1px solid #eb4d4d;
+    border-radius: 50%;
+    width: 30px;
+    transition: all .3s ease;
+    height: 30px;
+    font-size: 15px;
+    line-height: 30px;
+    color: #eb4d4d;
+}
+.dice{
+    position: absolute;
+    height: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 190px;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.1)
+}
